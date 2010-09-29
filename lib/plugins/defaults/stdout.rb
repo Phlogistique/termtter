@@ -13,7 +13,7 @@ config.plugins.stdout.set_default(
     '<%=time%> [<%=status_id%>] ',
     '</<%=config.plugins.stdout.gray||config.plugins.stdout.colors.last%>>',
     '<%= indent_text %>',
-    '<<%=color%>><%=s.user.screen_name%>: <%=text%></<%=color%>> ',
+    '<<%= indent == 0 ? color : config.plugins.stdout.gray %>><%=s.user.screen_name%>: <%=text%></<%=indent == 0 ? color : config.plugins.stdout.gray%>> ',
     '<<%=config.plugins.stdout.gray||config.plugins.stdout.colors.last%>>',
     '<%=reply_to_status_id ? " (reply_to [#{reply_to_status_id}]) " : ""%>',
     '<%=retweeted_status_id ? " (retweet_to [#{retweeted_status_id}]) " : ""%>',
